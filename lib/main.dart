@@ -32,7 +32,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      width: 200,
       decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage('assets/login.png'), fit: BoxFit.cover)),
