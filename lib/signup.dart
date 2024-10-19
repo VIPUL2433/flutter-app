@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_app/login.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({Key? key}) : super(key: key);
@@ -78,6 +79,9 @@ class _SignupPageState extends State<SignupPage> {
                         ),
                       ),
                     ),
+                    SizedBox(
+                      height: 25,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -89,14 +93,19 @@ class _SignupPageState extends State<SignupPage> {
                             color: Color(0xff4c505b),
                           ),
                         ),
-                        CircleAvatar(
-                          radius: 30,
-                          backgroundColor: Color(0xff4c505b),
-                          child: IconButton(
-                            color: Colors.white,
-                            onPressed: () {},
-                            icon: Icon(Icons.arrow_forward),
-                            iconSize: 23,
+                        InkWell(
+                          onTap: () {
+                            print(123);
+                          },
+                          child: CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Color(0xff4c505b),
+                            child: IconButton(
+                              color: Colors.white,
+                              onPressed: () {},
+                              icon: Icon(Icons.arrow_forward),
+                              iconSize: 23,
+                            ),
                           ),
                         )
                       ],
@@ -105,34 +114,25 @@ class _SignupPageState extends State<SignupPage> {
                       height: 34,
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         TextButton(
                             onPressed: () {
-                              Navigator.push(
+                              Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => SignupPage()),
+                                    builder: (context) => LoginPage()),
                               );
                             },
                             child: Text(
-                              'Sign up',
+                              'already have account',
                               style: TextStyle(
                                   fontSize: 15,
                                   color: Color(0xff4c505b),
                                   fontWeight: FontWeight.w500,
                                   decoration: TextDecoration.underline),
                             )),
-                        TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              'Forget password',
-                              style: TextStyle(
-                                  fontSize: 15,
-                                  color: Color(0xff4c505b),
-                                  fontWeight: FontWeight.w500,
-                                  decoration: TextDecoration.underline),
-                            ))
                       ],
                     )
                   ],
