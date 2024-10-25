@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:recipe_app/login.dart';
 import 'package:recipe_app/profile.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:recipe_app/splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ProfilePage(),
+      home: const SplashPage(),
     );
   }
 }
